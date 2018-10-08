@@ -12,15 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var fisrtCoordinator : FirstCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController()
         
-        let fisrtCoordinator : FirstCoordinator = FirstCoordinator(navigationController: window?.rootViewController as! UINavigationController)
-        fisrtCoordinator.start()
+        fisrtCoordinator = FirstCoordinator(navigationController: window?.rootViewController as! UINavigationController)
+        fisrtCoordinator?.start()
         
         window?.makeKeyAndVisible()
         return true
