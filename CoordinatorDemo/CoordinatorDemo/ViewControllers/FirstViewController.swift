@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol FirstViewControllerDelegate: class {
-    func navigateToSecondPage(withParam param : String )
+    func navigateToNextPage()
 }
 
 class FirstViewController: UIViewController {
@@ -24,6 +24,6 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func goToSecondPageAction(_ sender: Any) {
-        self.delegate?.navigateToSecondPage(withParam:"Parameter from FirstViewController")
+        self.delegate?.navigateToNextPage()
     }
 }

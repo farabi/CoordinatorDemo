@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol SecondViewControllerDelegate: class {
-    func navigateToThirdPage(withParam param : String )
+    func navigateToThirdPage()
 }
 
 class SecondViewController: UIViewController {
@@ -18,8 +18,11 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "SecondViewController"
     }
-
     
-
+    @IBAction func navigateToThirdPageAction(_ sender: Any) {
+        self.delegate?.navigateToThirdPage()
+    }
 }

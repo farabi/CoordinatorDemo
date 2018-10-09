@@ -8,12 +8,21 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+public protocol ThirdViewControllerDelegate: class {
+    func navigateToFirstPage(thirdViewController: ThirdViewController)
+}
 
-    override func viewDidLoad() {
+public class ThirdViewController: UIViewController {
+
+    public weak var delegate: ThirdViewControllerDelegate?
+    
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "ThirdViewController"
     }
 
+    @IBAction func navigateToFirstPageAction(_ sender: Any) {
+        self.delegate?.navigateToFirstPage(thirdViewController: self)
+    }
 }

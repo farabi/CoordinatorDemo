@@ -16,7 +16,6 @@
 		041F635D216019EF00BC6492 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F635B216019EF00BC6492 /* SecondViewController.swift */; };
 		041F635E216019EF00BC6492 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041F635C216019EF00BC6492 /* SecondViewController.xib */; };
 		041F636021601A8200BC6492 /* SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F635F21601A8200BC6492 /* SecondCoordinator.swift */; };
-		041F636221601AF800BC6492 /* ThirdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F636121601AF800BC6492 /* ThirdCoordinator.swift */; };
 		041F636521601C6E00BC6492 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F636321601C6E00BC6492 /* ThirdViewController.swift */; };
 		041F636621601C6E00BC6492 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041F636421601C6E00BC6492 /* ThirdViewController.xib */; };
 		041F636A21601EAD00BC6492 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F636921601EAD00BC6492 /* Coordinator.swift */; };
@@ -34,7 +33,6 @@
 		041F635B216019EF00BC6492 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		041F635C216019EF00BC6492 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		041F635F21601A8200BC6492 /* SecondCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoordinator.swift; sourceTree = "<group>"; };
-		041F636121601AF800BC6492 /* ThirdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCoordinator.swift; sourceTree = "<group>"; };
 		041F636321601C6E00BC6492 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		041F636421601C6E00BC6492 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 		041F636921601EAD00BC6492 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 				041F636921601EAD00BC6492 /* Coordinator.swift */,
 				041F63592160195F00BC6492 /* FirstCoordinator.swift */,
 				041F635F21601A8200BC6492 /* SecondCoordinator.swift */,
-				041F636121601AF800BC6492 /* ThirdCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -183,7 +180,6 @@
 				041F635A2160195F00BC6492 /* FirstCoordinator.swift in Sources */,
 				041F636521601C6E00BC6492 /* ThirdViewController.swift in Sources */,
 				041F636021601A8200BC6492 /* SecondCoordinator.swift in Sources */,
-				041F636221601AF800BC6492 /* ThirdCoordinator.swift in Sources */,
 				041F6357216010CD00BC6492 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

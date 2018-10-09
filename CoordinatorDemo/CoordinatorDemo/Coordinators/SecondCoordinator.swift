@@ -8,11 +8,21 @@
 
 import UIKit
 
+
+protocol BackToFirstViewControllerDelegate: class {
+    
+    func navigateBackToFirstPage(newOrderCoordinator: SecondCoordinator)
+    
+}
+
 class SecondCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
     
     unowned let navigationController:UINavigationController
+    
+    weak var delegate: BackToFirstViewControllerDelegate?
+    
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -26,9 +36,20 @@ class SecondCoordinator: Coordinator {
 }
 
 extension SecondCoordinator : SecondViewControllerDelegate {
-    func navigateToThirdPage(withParam param : String ) {
-        
+    func navigateToThirdPage() {
+        let thirdViewController : ThirdViewController = ThirdViewController()
+        thirdViewController.delegate = self
+        self.navigationController.pushViewController(thirdViewController, animated: true)
     }
 }
+
+
+extension SecondCoordinator: ThirdViewControllerDelegate {
+    
+    func navigateToFirstPage(thirdViewController: ThirdViewController) {
+        self.delegate?.navigateBackToFirstPage(newOrderCoordinator: self)
+    }
+}
+
 
 
