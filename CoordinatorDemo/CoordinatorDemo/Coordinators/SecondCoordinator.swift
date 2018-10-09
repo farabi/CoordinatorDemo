@@ -2,7 +2,7 @@
 //  SecondCoordinator.swift
 //  CoordinatorDemo
 //
-//  Created by Mac on 29/09/2018.
+//  Created by Saad El Oulladi on 29/09/2018.
 //  Copyright © 2018 touti. All rights reserved.
 //
 
@@ -21,8 +21,8 @@ class SecondCoordinator: Coordinator {
     
     unowned let navigationController:UINavigationController
     
+    // We use this delegate to keep a reference to the parent coordinator
     weak var delegate: BackToFirstViewControllerDelegate?
-    
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -36,6 +36,8 @@ class SecondCoordinator: Coordinator {
 }
 
 extension SecondCoordinator : SecondViewControllerDelegate {
+    
+    // Navigate to third page
     func navigateToThirdPage() {
         let thirdViewController : ThirdViewController = ThirdViewController()
         thirdViewController.delegate = self
@@ -43,9 +45,9 @@ extension SecondCoordinator : SecondViewControllerDelegate {
     }
 }
 
-
 extension SecondCoordinator: ThirdViewControllerDelegate {
-    
+
+    // Navigate to third page
     func navigateToFirstPage(thirdViewController: ThirdViewController) {
         self.delegate?.navigateBackToFirstPage(newOrderCoordinator: self)
     }

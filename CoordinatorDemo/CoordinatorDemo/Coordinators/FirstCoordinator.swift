@@ -2,7 +2,7 @@
 //  FirstCoordinator.swift
 //  CoordinatorDemo
 //
-//  Created by Mac on 29/09/2018.
+//  Created by Saad El Oulladi on 29/09/2018.
 //  Copyright © 2018 touti. All rights reserved.
 //
 
@@ -27,6 +27,7 @@ class FirstCoordinator: Coordinator {
 
 extension FirstCoordinator: FirstViewControllerDelegate {
 
+    // Navigate to next page
     func navigateToNextPage() {
        let secondCoordinator = SecondCoordinator(navigationController: navigationController)
        secondCoordinator.delegate = self
@@ -37,6 +38,7 @@ extension FirstCoordinator: FirstViewControllerDelegate {
 
 extension FirstCoordinator: BackToFirstViewControllerDelegate {
     
+    // Back from third page
     func navigateBackToFirstPage(newOrderCoordinator: SecondCoordinator) {
         navigationController.popToRootViewController(animated: true)
         childCoordinators.removeLast()
