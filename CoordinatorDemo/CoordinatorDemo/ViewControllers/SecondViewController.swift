@@ -9,6 +9,7 @@
 import UIKit
 
 public protocol SecondViewControllerDelegate: class {
+    func navigateToFirstPage()
     func navigateToThirdPage()
 }
 
@@ -16,10 +17,18 @@ class SecondViewController: UIViewController {
     
     public weak var delegate: SecondViewControllerDelegate?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "SecondViewController"
+        
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(navigateBackToFirstpage))
+        self.navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func navigateBackToFirstpage() {
+        self.delegate?.navigateToFirstPage()
     }
     
     @IBAction func navigateToThirdPageAction(_ sender: Any) {

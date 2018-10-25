@@ -8,13 +8,9 @@
 
 import UIKit
 
-public protocol ThirdViewControllerDelegate: class {
-    func navigateToFirstPage(thirdViewController: ThirdViewController)
-}
-
 public class ThirdViewController: UIViewController {
 
-    public weak var delegate: ThirdViewControllerDelegate?
+    public weak var delegate: SecondViewControllerDelegate?
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +19,6 @@ public class ThirdViewController: UIViewController {
     }
 
     @IBAction func navigateToFirstPageAction(_ sender: Any) {
-        self.delegate?.navigateToFirstPage(thirdViewController: self)
+        self.delegate?.navigateToFirstPage()
     }
 }

@@ -43,12 +43,9 @@ extension SecondCoordinator : SecondViewControllerDelegate {
         thirdViewController.delegate = self
         self.navigationController.pushViewController(thirdViewController, animated: true)
     }
-}
-
-extension SecondCoordinator: ThirdViewControllerDelegate {
-
-    // Navigate to third page
-    func navigateToFirstPage(thirdViewController: ThirdViewController) {
+    
+    // Navigate to first page
+    func navigateToFirstPage() {
         self.delegate?.navigateBackToFirstPage(newOrderCoordinator: self)
     }
 }
