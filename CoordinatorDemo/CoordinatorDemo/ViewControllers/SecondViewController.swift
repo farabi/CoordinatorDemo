@@ -23,6 +23,7 @@ class SecondViewController: UIViewController {
         
         title = "SecondViewController"
         
+        // Use custom back button to pass through coordinator.
         let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(navigateBackToFirstpage))
         self.navigationItem.leftBarButtonItem = backButton
     }
